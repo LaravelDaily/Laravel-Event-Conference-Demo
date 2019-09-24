@@ -72,6 +72,126 @@
                         </ul>
                     </li>
                 @endcan
+                @can('setting_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.settings.index") }}" class="nav-link {{ request()->is('admin/settings') || request()->is('admin/settings/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-cogs">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.setting.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('speaker_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.speakers.index") }}" class="nav-link {{ request()->is('admin/speakers') || request()->is('admin/speakers/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-users">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.speaker.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('schedule_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.schedules.index") }}" class="nav-link {{ request()->is('admin/schedules') || request()->is('admin/schedules/*') ? 'active' : '' }}">
+                            <i class="fa-fw far fa-clock">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.schedule.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('venue_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.venues.index") }}" class="nav-link {{ request()->is('admin/venues') || request()->is('admin/venues/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-map-marker-alt">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.venue.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('hotel_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.hotels.index") }}" class="nav-link {{ request()->is('admin/hotels') || request()->is('admin/hotels/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-hotel">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.hotel.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('gallery_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.galleries.index") }}" class="nav-link {{ request()->is('admin/galleries') || request()->is('admin/galleries/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-images">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.gallery.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('sponsor_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.sponsors.index") }}" class="nav-link {{ request()->is('admin/sponsors') || request()->is('admin/sponsors/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-hand-holding-usd">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.sponsor.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('faq_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.faqs.index") }}" class="nav-link {{ request()->is('admin/faqs') || request()->is('admin/faqs/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-question">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.faq.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('amenity_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.amenities.index") }}" class="nav-link {{ request()->is('admin/amenities') || request()->is('admin/amenities/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-check">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.amenity.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('price_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.prices.index") }}" class="nav-link {{ request()->is('admin/prices') || request()->is('admin/prices/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-money-bill">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.price.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 <li class="nav-item">
                     <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                         <p>
