@@ -33,6 +33,18 @@
                     {{ trans('cruds.speaker.fields.description_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
+                <label for="full_description">{{ trans('cruds.speaker.fields.full_description') }}</label>
+                <textarea id="full_description" name="full_description" class="form-control ">{{ old('full_description', isset($speaker) ? $speaker->full_description : '') }}</textarea>
+                @if($errors->has('full_description'))
+                    <p class="help-block">
+                        {{ $errors->first('full_description') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.speaker.fields.full_description_helper') }}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('photo') ? 'has-error' : '' }}">
                 <label for="photo">{{ trans('cruds.speaker.fields.photo') }}</label>
                 <div class="needsclick dropzone" id="photo-dropzone">

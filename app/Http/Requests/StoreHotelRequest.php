@@ -19,8 +19,14 @@ class StoreHotelRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
+            'name'   => [
                 'required',
+            ],
+            'rating' => [
+                'nullable',
+                'integer',
+                'min:0',
+                'max:5',
             ],
         ];
     }

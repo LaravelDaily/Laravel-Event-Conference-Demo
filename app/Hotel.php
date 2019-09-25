@@ -26,6 +26,7 @@ class Hotel extends Model implements HasMedia
 
     protected $fillable = [
         'name',
+        'rating',
         'address',
         'created_at',
         'updated_at',

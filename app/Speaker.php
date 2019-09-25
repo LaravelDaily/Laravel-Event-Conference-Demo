@@ -33,6 +33,7 @@ class Speaker extends Model implements HasMedia
         'updated_at',
         'deleted_at',
         'description',
+        'full_description',
     ];
 
     public function registerMediaConversions(Media $media = null)

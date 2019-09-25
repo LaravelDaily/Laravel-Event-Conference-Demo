@@ -36,6 +36,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.speaker.fields.full_description') }}
+                        </th>
+                        <td>
+                            {!! $speaker->full_description !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.speaker.fields.photo') }}
                         </th>
                         <td>

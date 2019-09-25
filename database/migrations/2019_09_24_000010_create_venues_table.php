@@ -19,6 +19,8 @@ class CreateVenuesTable extends Migration
 
             $table->string('longitude');
 
+            $table->longText('description')->nullable();
+
             $table->timestamps();
 
             $table->softDeletes();

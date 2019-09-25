@@ -60,6 +60,18 @@
                     {{ trans('cruds.hotel.fields.description_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('rating') ? 'has-error' : '' }}">
+                <label for="rating">{{ trans('cruds.hotel.fields.rating') }}</label>
+                <input type="number" id="rating" name="rating" class="form-control" value="{{ old('rating', isset($hotel) ? $hotel->rating : '') }}" step="1">
+                @if($errors->has('rating'))
+                    <p class="help-block">
+                        {{ $errors->first('rating') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.hotel.fields.rating_helper') }}
+                </p>
+            </div>
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>

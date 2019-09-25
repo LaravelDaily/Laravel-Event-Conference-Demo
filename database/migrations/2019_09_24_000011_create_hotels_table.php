@@ -17,6 +17,8 @@ class CreateHotelsTable extends Migration
 
             $table->longText('description')->nullable();
 
+            $table->integer('rating')->nullable();
+
             $table->timestamps();
 
             $table->softDeletes();

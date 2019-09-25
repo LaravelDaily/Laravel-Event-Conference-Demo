@@ -21,6 +21,8 @@ class CreateSpeakersTable extends Migration
 
             $table->string('linkedin')->nullable();
 
+            $table->longText('full_description')->nullable();
+
             $table->timestamps();
 
             $table->softDeletes();

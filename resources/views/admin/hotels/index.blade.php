@@ -38,6 +38,9 @@
                             {{ trans('cruds.hotel.fields.description') }}
                         </th>
                         <th>
+                            {{ trans('cruds.hotel.fields.rating') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -66,6 +69,9 @@
                             </td>
                             <td>
                                 {{ $hotel->description ?? '' }}
+                            </td>
+                            <td>
+                                {{ $hotel->rating ?? '' }}
                             </td>
                             <td>
                                 @can('hotel_show')
