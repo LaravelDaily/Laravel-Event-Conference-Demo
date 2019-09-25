@@ -1,14 +1,29 @@
-@extends('layouts.admin')
-@section('content')
-<div class="content">
-    <div class="row">
-        <div class="col-lg-12">
-            Home
-        </div>
-    </div>
-</div>
-@endsection
-@section('scripts')
-@parent
+@extends('layouts.main')
 
+@section('content')
+@include('sections.intro')
+
+<main id="main">
+  @include('sections.about')
+
+  @include('sections.speakers')
+
+  @include('sections.schedule')
+
+  @include('sections.venues')
+
+  @include('sections.hotels')
+
+  @include('sections.gallery')
+
+  @include('sections.sponsors')
+
+  @include('sections.faq')
+
+  @include('sections.subscribe')
+
+  @include('sections.buy_ticket')
+
+  @include('sections.contact')
+</main>
 @endsection
