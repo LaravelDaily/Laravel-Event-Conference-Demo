@@ -1,9 +1,9 @@
-<header id="header">
+<header id="header"@if(Route::current()->getName() != 'home') class="header-fixed"@endif>
   <div class="container">
 
     <div id="logo" class="pull-left">
       <h1>
-        <a href="#intro">
+        <a href="{{ route('home') }}#intro">
           <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
           {{ env('APP_NAME', 'The Event') }}
         </a>
@@ -12,16 +12,16 @@
 
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li class="menu-active"><a href="#intro">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#venue">Venue</a></li>
-        <li><a href="#hotels">Hotels</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#supporters">Sponsors</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+        <li class="menu-active"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#intro">Home</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#about">About</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#speakers">Speakers</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#schedule">Schedule</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#venue">Venue</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#hotels">Hotels</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#gallery">Gallery</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#supporters">Sponsors</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#contact">Contact</a></li>
+        <li class="buy-tickets"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#buy-tickets">Buy Tickets</a></li>
       </ul>
     </nav>
   </div>

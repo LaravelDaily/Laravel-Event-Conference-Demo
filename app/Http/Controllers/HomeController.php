@@ -33,4 +33,11 @@ class HomeController extends Controller
 
         return view('home', compact('settings', 'speakers', 'schedules', 'venues', 'hotels', 'galleries', 'sponsors', 'faqs', 'prices', 'amenities'));
     }
+
+    public function view(Speaker $speaker)
+    {
+        $settings = Setting::pluck('value', 'key');
+        
+        return view('speaker', compact('settings', 'speaker'));
+    }
 }
