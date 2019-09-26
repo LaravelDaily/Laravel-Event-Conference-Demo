@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Laravel-Event-Conference-Demo',
+    'site_title' => 'Conference Event',
 ];
