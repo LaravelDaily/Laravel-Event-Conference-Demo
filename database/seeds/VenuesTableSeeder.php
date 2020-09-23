@@ -22,7 +22,7 @@ class VenuesTableSeeder extends Seeder
 
         foreach(range(1,8) as $id)
         {
-            $venue->addMediaFromUrl(storage_path()."/seeders/venue-gallery/$id.jpg")->toMediaCollection('photos');
+            $venue->addMedia(storage_path()."/seeders/venue-gallery/$id.jpg")->preservingOriginal()->toMediaCollection('photos');
         }
     }
 }
