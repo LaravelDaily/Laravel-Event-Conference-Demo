@@ -67,7 +67,7 @@ class SpeakersTableSeeder extends Seeder
         {
             $photo_id = $key+1;
             $speaker = Speaker::create($speaker);
-            $speaker->addMediaFromUrl(storage_path()."/seeders/speakers/$photo_id.jpg")->toMediaCollection('photo');
+            $speaker->addMedia(storage_path()."/seeders/speakers/$photo_id.jpg")->preservingOriginal()->toMediaCollection('photo');
         }
     }
 }
