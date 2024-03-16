@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Sponsor;
 use Illuminate\Database\Seeder;
 
@@ -47,11 +49,10 @@ class SponsorsTableSeeder extends Seeder
             ],
         ];
 
-        foreach($sponsors as $key => $sponsor)
-        {
+        foreach ($sponsors as $key => $sponsor) {
             $photo_id = $key + 1;
             $sponsor = Sponsor::create($sponsor);
-            $sponsor->addMedia(storage_path()."/seeders/supporters/$photo_id.png")->preservingOriginal()->toMediaCollection('logo');
+            $sponsor->addMedia(storage_path() . "/seeders/supporters/$photo_id.png")->preservingOriginal()->toMediaCollection('logo');
         }
     }
 }

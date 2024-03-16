@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Venue;
 use Illuminate\Database\Seeder;
 
@@ -20,9 +22,8 @@ class VenuesTableSeeder extends Seeder
             'description'   =>  'Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.'
         ]);
 
-        foreach(range(1,8) as $id)
-        {
-            $venue->addMedia(storage_path()."/seeders/venue-gallery/$id.jpg")->preservingOriginal()->toMediaCollection('photos');
+        foreach (range(1, 8) as $id) {
+            $venue->addMedia(storage_path() . "/seeders/venue-gallery/$id.jpg")->preservingOriginal()->toMediaCollection('photos');
         }
     }
 }

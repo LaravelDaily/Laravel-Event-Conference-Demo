@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Hotel;
 use Illuminate\Database\Seeder;
 
@@ -30,11 +32,10 @@ class HotelsTableSeeder extends Seeder
             ],
         ];
 
-        foreach($hotels as $key => $hotel)
-        {
-            $photo_id = $key+1;
+        foreach ($hotels as $key => $hotel) {
+            $photo_id = $key + 1;
             $hotel = Hotel::create($hotel);
-            $hotel->addMedia(storage_path()."/seeders/hotels/$photo_id.jpg")->preservingOriginal()->toMediaCollection('photo');
+            $hotel->addMedia(storage_path() . "/seeders/hotels/$photo_id.jpg")->preservingOriginal()->toMediaCollection('photo');
         }
     }
 }

@@ -1,6 +1,9 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Speaker;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class SpeakersTableSeeder extends Seeder
@@ -12,7 +15,7 @@ class SpeakersTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Factory::create();
         $speakers = [
             [
                 'name'              => 'Brenden Legros',
@@ -63,11 +66,10 @@ class SpeakersTableSeeder extends Seeder
                 'full_description'  => $faker->paragraph
             ],
         ];
-        foreach($speakers as $key => $speaker)
-        {
-            $photo_id = $key+1;
+        foreach ($speakers as $key => $speaker) {
+            $photo_id = $key + 1;
             $speaker = Speaker::create($speaker);
-            $speaker->addMedia(storage_path()."/seeders/speakers/$photo_id.jpg")->preservingOriginal()->toMediaCollection('photo');
+            $speaker->addMedia(storage_path() . "/seeders/speakers/$photo_id.jpg")->preservingOriginal()->toMediaCollection('photo');
         }
     }
 }

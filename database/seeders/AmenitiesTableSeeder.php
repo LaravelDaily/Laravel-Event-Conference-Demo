@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Amenity;
 use Illuminate\Database\Seeder;
 
@@ -33,8 +35,7 @@ class AmenitiesTableSeeder extends Seeder
             ],
         ];
 
-        foreach($amenities as $amenity)
-        {
+        foreach ($amenities as $amenity) {
             Amenity::create($amenity);
         }
     }

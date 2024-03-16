@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Setting;
 use Illuminate\Database\Seeder;
 
@@ -74,8 +76,7 @@ class SettingsTableSeeder extends Seeder
             ],
         ];
 
-        foreach($settings as $setting)
-        {
+        foreach ($settings as $setting) {
             Setting::create($setting);
         }
     }

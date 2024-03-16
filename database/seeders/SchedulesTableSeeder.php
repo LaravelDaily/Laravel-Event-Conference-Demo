@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Schedule;
 use Illuminate\Database\Seeder;
 
@@ -148,8 +150,7 @@ class SchedulesTableSeeder extends Seeder
             ],
         ];
 
-        foreach($schedules as $schedule)
-        {
+        foreach ($schedules as $schedule) {
             Schedule::create($schedule);
         }
     }

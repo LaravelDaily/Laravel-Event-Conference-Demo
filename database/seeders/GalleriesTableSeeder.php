@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Gallery;
 use Illuminate\Database\Seeder;
 
@@ -15,9 +17,8 @@ class GalleriesTableSeeder extends Seeder
         $gallery = Gallery::create([
             'name' => 'Event'
         ]);
-        foreach(range(1,8) as $id)
-        {
-            $gallery->addMedia(storage_path()."/seeders/gallery/$id.jpg")->preservingOriginal()->toMediaCollection('photos');
+        foreach (range(1, 8) as $id) {
+            $gallery->addMedia(storage_path() . "/seeders/gallery/$id.jpg")->preservingOriginal()->toMediaCollection('photos');
         }
     }
 }

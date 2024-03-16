@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Price;
 use Illuminate\Database\Seeder;
 
@@ -27,8 +29,7 @@ class PricesTableSeeder extends Seeder
             ],
         ];
 
-        foreach($prices as $price)
-        {
+        foreach ($prices as $price) {
             Price::create($price);
         }
     }

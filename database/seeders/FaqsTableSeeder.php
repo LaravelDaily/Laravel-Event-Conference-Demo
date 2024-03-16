@@ -1,6 +1,9 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Faq;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class FaqsTableSeeder extends Seeder
@@ -12,10 +15,9 @@ class FaqsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Factory::create();
 
-        foreach(range(1, 6) as $key)
-        {
+        foreach (range(1, 6) as $key) {
             Faq::create([
                 'question' => $faker->sentence,
                 'answer' => $faker->paragraph
